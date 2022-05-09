@@ -22,7 +22,7 @@ foreach ($data as $produit) {
 
     $pdf = new FPDF();
     $pdf->AddPage();
-      // $pdf->Image("../assets//img/lg.jpg", 10, 2, 25, 20);
+       $pdf->Image("./assets//img/lg.jpg", 10, 2, 25, 20);
     $pdf->Ln(10);
     $pdf->Ln(2);
     $pdf->Ln(10);

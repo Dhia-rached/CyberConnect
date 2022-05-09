@@ -173,7 +173,7 @@ require('fpdf/fpdf.php');
 
             <!-- Nav Item - Tables -->
             <li class="nav-item">
-            <a href="afficher_front.php" class="btn btn-success ">
+            <a href="index.php" class="btn btn-success ">
                                         <span class="icon text-white-50">
                                             <i class="fas fa-check"></i>
                                         </span> Allez au front</a>

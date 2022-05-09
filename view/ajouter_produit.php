@@ -2,8 +2,9 @@
     include_once '../Model/produit.php';
     include_once '../Model/categorie.php';
     include_once '../controler/produitC.php';
-  
+ // include_once 'QRcode.php';
    include_once '../controler/categorieC.php';
+   include_once './phpqrcode/qrlib.php';
 
 
     $error = "";

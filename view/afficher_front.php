@@ -182,7 +182,7 @@
                     <div class="product-image">
                     <tr>
                     <td>
-                        <a href="single-product.php"><?php $img=$produit['img'];
+                        <a href="single-product.php?id=<?php echo$produit['code']; ?>"><?php $img=$produit['img'];
                         echo "<img src='$img'>"; ?>
                         <style> img{width:180px;height:180px;}</style></a>
                 </td>

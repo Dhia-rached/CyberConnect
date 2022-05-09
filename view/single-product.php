@@ -1,9 +1,11 @@
 
 <?php
 	include '../controler/produitC.php';
+	$produit= null;
 	$produitC=new produitC();
-		$listeproduit=$produitC->afficher_produit();
-		$listeProduit=$produitC->rechercherproduit($_POST['code']); 
+	
+		//$listeproduit=$produitC->afficher_produit();
+		//$listeProduit=$produitC->rechercherproduit($_POST['code']); 
 	//$prod=new produitC();
     //ligne 94  w enti mechi 3 ligne 
 ?>
@@ -19,7 +21,7 @@
 	<title>Single Product</title>
 
 	<!-- favicon -->
-	<link rel="shortcut icon" type="" href="nikerevolution.webp">
+	<link rel="shortcut icon" type="image/png" href="assets/img/favicon.png">
 	<!-- google font -->
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
@@ -151,20 +153,98 @@
 			</div>
 		</div>
 	</div>
-	<!-- end breadcrumb section -->
 
 	<!-- single product -->
-	<head></head>
 	
 </html>
 <body>
 	   
+<?php
+			if (isset($_GET['id'])){
+				$produit = $produitC->recuperer_produit($_GET['id']);
+			}
+		?>
+		 <a href="QRcode.php?id=<?php echo$produit['code']; ?>">
+
+<div class="single-product mt-150 mb-150">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-5">
+					<div class="single-product-img">
+					<?php $img=$produit['img'];
+						echo "<img src='$img'>"; ?>
+						<style> img{width: 360px;height:360px;}</style>
+					</div>
+				</div>
+				<div class="col-md-7">
+					<div class="single-product-content">
+					<h3> <td><?php echo $produit['nom']; ?></td></h3>
+						<p class="single-product-pricing" >PRIX:<?php echo $produit['prix']; ?></p>
+						
+						<div class="single-product-form">
+							<form action="index.html">
+								<input type="number" placeholder="0">
+							</form>
+							<a href="cart.html" class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+							
+						</div>
+						<h4>Share:</h4>
+						<ul class="product-share">
+							<li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+							<li><a href=""><i class="fab fa-twitter"></i></a></li>
+							<li><a href=""><i class="fab fa-google-plus-g"></i></a></li>
+							<li><a href=""><i class="fab fa-linkedin"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+               
+                
+<!--<div class="single-product mt-150 mb-150">
+		<div class="container">
+			<div class="row">
+				
+					<div class="single-product-img">
+					<//?php $img=$produit['img'];
+						echo "<img src='$img'>"; ?>
+						<style> img{width: 360px;height:360px;}</style>
+					</div>
+				</div>
+				<div class="col-md-7">
+				<div class="row">
+					<div class="single-product-content">
+						<h3>Green apples have polyphenols</h3>
+						<p class="single-product-pricing"><span>Per Kg</span> $50</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta sint dignissimos, rem commodi cum voluptatem quae reprehenderit repudiandae ea tempora incidunt ipsa, quisquam animi perferendis eos eum modi! Tempora, earum.</p>
+						<div class="single-product-form">
+							<form action="index.html">
+								<input type="number" placeholder="0">
+							</form>
+							<a href="cart.html" class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+							<p><strong>Categories: </strong>Fruits, Organic</p>
+						</div>
+						<h4>Share:</h4>
+						<ul class="product-share">
+							<li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+							<li><a href=""><i class="fab fa-twitter"></i></a></li>
+							<li><a href=""><i class="fab fa-google-plus-g"></i></a></li>
+							<li><a href=""><i class="fab fa-linkedin"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+               <h3> <td><?php //echo $produit['nom']; ?></td></h3>
+		</div>	< <input type="" value="" name="ref"> -->
+					
+				</td>
 		
-		
-		
-			
-			
-		</table>
+				</div>
+				</div>
+				</div>
+				</div>
 			</div>
 	</body>
 	<!-- end single product -->
