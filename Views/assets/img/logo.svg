@@ -1,0 +1,27 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 482.8 156.16">
+    <defs>
+        <style>
+            .cls-1 {
+                font-size: 148.72px;
+                fill: #e8e8e8;
+            }
+
+            .cls-1,
+            .cls-2 {
+                font-family: BebasNeue-Regular, Bebas Neue;
+            }
+
+            .cls-2 {
+                font-size: 60.47px;
+            }
+
+            .cls-2,
+            .cls-3 {
+                fill: #ff0;
+            }
+        </style>
+    </defs>
+    <title>sports.com</title><text class="cls-1" transform="translate(0 126.41) scale(1.06 1)">SPORTS</text><text
+        class="cls-2" transform="translate(398 128.07) scale(1.06 1)">com</text>
+    <circle class="cls-3" cx="381.8" cy="116.18" r="8" />
+</svg>
